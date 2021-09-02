@@ -1,94 +1,226 @@
 {
-   "$schema":"https://specs.frictionlessdata.io/schemas/table-schema.json",
-   "name":"objets-importants",
-   "title":"Schéma des objets importants",
-   "description":"Spécification du fichier d'échange relatif aux objets importants gérés par les collectivités.",
-   "keywords":[
-      "objets",
-      "autre-tag"
-   ],
-   "countryCode":"FR",
-   "homepage":"https://github.com/mon-orga/schema-objets-importants",
-   "path":"https://github.com/mon-orga/schema-objets-importants/raw/v0.1.1/schema.json",
-   "image":"https://github.com/mon-orga/schema-objets-importants/raw/v0.1.1/irve.png",
-   "licenses":[
-      {
-         "title":"Etalab Licence Ouverte 2.0",
-         "name":"etalab-2.0",
-         "path":"https://spdx.org/licenses/etalab-2.0.html"
+  "$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+  "name": "catalogue-donnees",
+  "title": "Catalogue de données",
+  "description": "Spécification du catalogue des jeux de données produits par une organisation",
+  "countryCode": "FR",
+  "homepage": "https://github.com/etalab/schema-catalogue-donnees/",
+  "path": "https://github.com/etalab/schema-catalogue-donnees/raw/v0.1.0/schema.json",
+  "resources": [
+    {
+      "title": "Fichier valide (CSV)",
+      "name": "exemple-valide-csv",
+      "path": "https://github.com/etalab/schema-catalogue-donnees/raw/master/exemple-valide.csv"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Arrêté du 14 juin 2017 relatif aux données de référence",
+      "path": "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000034944648/"
+    },
+    {
+      "title": "Spécification DCAT-AP (2.0.1)",
+      "path": "https://github.com/SEMICeu/DCAT-AP/raw/master/releases/2.0.1/DCAT_AP_2.0.1.pdf"
+    },
+    {
+      "title": "Technical Guidance for INSPIRE metadata for datasets and services (2.0.1)",
+      "path": "http://inspire.ec.europa.eu/documents/Metadata/MD_IR_and_ISO_20131029.pdf"
+    },
+    {
+      "title": "Schéma Catalogue simplifié OpenDataFrance (0.1.2)",
+      "path": "https://git.opendatafrance.net/scdl/catalogue"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Pierre Dittgen",
+      "role": "author",
+      "organisation": "Jailbreak",
+      "email": "pierre.dittgen@jailbreak.paris"
+    },
+    {
+      "title": "Johan Richer",
+      "role": "author",
+      "organisation": "Jailbreak",
+      "email": "johan.richer@jailbreak.paris"
+    }
+  ],
+  "version": "0.1.0",
+  "created": "2021-09-02",
+  "lastModified": "2021-09-02",
+  "fields": [
+    {
+      "name": "titre",
+      "title": "Titre",
+      "description": "Nom du jeu de données.",
+      "type": "string",
+      "example": "Arbres vivants inventoriés en forêt.",
+      "constraints": {
+        "required": true
       }
-   ],
-   "resources":[
-      {
-         "title":"Fichier valide (CSV)",
-         "name":"exemple-valide-csv",
-         "path":"https://github.com/mon-orga/schema-objets-importants/raw/v0.1.1/exemple-valide.csv"
+    },
+    {
+      "name": "description",
+      "title": "Description",
+      "description": "Présentation du jeu de données.",
+      "type": "string",
+      "example": "Données brutes de l'inventaire forestier correspondant à l'ensemble des données collectées en forêt sur le territoire métropolitain par les agents forestiers de terrain de l'IGN. Ces données portent sur les caractéristiques des placettes d'inventaire, les mesures et observations sur les arbres et les données éco-floristiques. Les coordonnées géographiques des placettes sont fournies au kilomètre près.",
+      "constraints": {
+        "required": true
       }
-   ],
-   "sources":[
-      {
-         "title":"Arrêté du 12 janvier 2017 relatif aux objets importants",
-         "path":"https://beta.legifrance.gouv.fr/codes/id/LEGISCTA000031367685/2020-05-25"
+    },
+    {
+      "name": "mots_cles",
+      "title": "Mots clés",
+      "description": "Liste de mots ou \"tags\" associés au jeu de données et le décrivant, séparés par une virgule.",
+      "type": "string",
+      "example": "arbre,forêt,écologie",
+      "constraints": {
+        "required": true
       }
-   ],
-   "created":"2018-06-29",
-   "lastModified":"2019-05-06",
-   "version":"0.1.1",
-   "contributors":[
-      {
-         "title":"John Smith",
-         "email":"john.smith@etalab.gouv.fr",
-         "organisation":"Etalab",
-         "role":"author"
-      },
-      {
-         "title":"Jane Doe",
-         "email":"jane.doe@example.com",
-         "organisation":"Association très importante",
-         "role":"contributor"
+    },
+    {
+      "name": "nom_orga",
+      "title": "Nom de l'organisation",
+      "description": "Nom du producteur du jeu de données.",
+      "type": "string",
+      "example": "Institut national de l'information géographique et forestière",
+      "constraints": {
+        "required": true
       }
-   ],
-   "fields":[
-      {
-         "name":"id",
-         "description":"Un identifiant unique de l'objet.",
-         "example":"42",
-         "type":"integer",
-         "constraints":{
-            "required":true,
-            "minimum":1
-         }
-      },
-      {
-         "name":"date_creation",
-         "description":"La date de création de l'objet, au format ISO 8601 AAAA-MM-DD.",
-         "example":"2020-02-27",
-         "type":"date",
-         "constraints":{
-            "required":true
-         }
-      },
-      {
-         "name":"nom",
-         "description":"Le nom de l'objet.",
-         "example":"Brouette",
-         "type":"string",
-         "constraints":{
-            "required":true
-         }
-      },
-      {
-         "name":"classification",
-         "description":"Classification de l'objet.",
-         "example":"Classification A",
-         "type":"array",
-         "arrayItem":{
-            "type": "string",
-            "constraints": {
-               "enum": ["Classification A", "Classification B", "Classification C"]
-            }
-         }
+    },
+    {
+      "name": "siret_orga",
+      "title": "Numéro SIRET de l'organisation",
+      "description": "Numéro SIRET du producteur du jeu de données.",
+      "type": "string",
+      "example": "18006701900430"
+    },
+    {
+      "name": "id_alt_orga",
+      "title": "Identifiant alternatif de l'organisation",
+      "description": "Identifiant du producteur ne possédant pas de numéro SIRET. Dans le cas d'une association il s'agira par exemple du numéro RNA.",
+      "type": "string",
+      "example": "W343008792"
+    },
+    {
+      "name": "service",
+      "title": "Service",
+      "description": "Service producteur du jeu de données au sein de l'organisation.",
+      "type": "string",
+      "example": "Service de l'inventaire forestier.",
+      "constraints": {
+        "required": true
       }
-   ],
-   "primaryKey":"id"
+    },
+    {
+      "name": "si",
+      "title": "Système d'information",
+      "description": "Nom du système d'information (base de données ou application métier) à partir duquel a été extrait le jeu de données.",
+      "type": "string",
+      "example": "Inventaire forestier."
+    },
+    {
+      "name": "contact",
+      "title": "Contact",
+      "description": "Adresse email de la personne ou du service qui maintient le jeu de données et/ou qui l'extrait depuis le SI source.",
+      "type": "string",
+      "format": "email",
+      "example": "jean.martin@ign.fr",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "date_pub",
+      "title": "Date de première publication",
+      "description": "Date de la publication intiale du jeu de données.",
+      "type": "date",
+      "example": "2005-01-14",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "date_maj",
+      "title": "Date de dernière mise à jour",
+      "description": "Date de la dernière modification effective du jeu de données.",
+      "type": "date",
+      "example": "2019-05-28",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "freq_maj",
+      "title": "Fréquence de mise à jour",
+      "description": "Périodicité suivant laquelle des modifications sont apportées au jeu de données.",
+      "type": "string",
+      "example": "Annuelle",
+      "constraints": {
+        "required": true,
+        "enum": [
+          "Autre",
+          "Irrégulière",
+          "Toutes les heures",
+          "Quotidienne ou plusieurs fois par jour",
+          "Hebdomadaire ou plusieurs fois par semaine",
+          "Mensuelle ou plusieurs fois par mois",
+          "Bimestrielle",
+          "Trimestrielle",
+          "Semestrielle",
+          "Annuelle"
+        ]
+      }
+    },
+    {
+      "name": "couv_geo",
+      "title": "Couverture géographique",
+      "description": "Description du territoire que couvre le jeu de données.",
+      "type": "string",
+      "example": "France métropolitaine",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "url",
+      "title": "URL",
+      "description": "Page web du jeu de données.",
+      "type": "string",
+      "format": "uri",
+      "example": "https://www.data.gouv.fr/fr/datasets/donnees-brutes-de-l-inventaire-forestier/",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "format",
+      "title": "Format",
+      "description": "Format de la ressource (fichier) composant le jeu de données. Si plusieurs ressources existent, autant de valeurs peuvent être renseignées en les séparant par une virgule.",
+      "type": "string",
+      "example": "CSV, XLSX",
+      "constraints": {
+        "required": true
+      }
+    },
+    {
+      "name": "licence",
+      "title": "Licence",
+      "description": "Licence appliquée au jeu de données.",
+      "type": "string",
+      "example": "Licence ouverte",
+      "constraints": {
+        "required": true
+      }
+    }
+  ],
+  "custom_checks": [
+    {
+      "name": "french-siret-value",
+      "params": {
+        "column": "siret_organisation"
+      }
+    }
+  ]
 }
