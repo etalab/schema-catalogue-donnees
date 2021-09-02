@@ -48,6 +48,13 @@
   "version": "0.1.0",
   "created": "2021-09-02",
   "lastModified": "2021-09-02",
+  "licenses":[
+    {
+      "title":"Etalab Licence Ouverte 2.0",
+      "name":"etalab-2.0",
+      "path":"https://spdx.org/licenses/etalab-2.0.html"
+    }
+   ],
   "fields": [
     {
       "name": "titre",
