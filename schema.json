@@ -226,7 +226,7 @@
     {
       "name": "french-siret-value",
       "params": {
-        "column": "siret_organisation"
+        "column": "siret_orga"
       }
     }
   ]
