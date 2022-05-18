@@ -88,7 +88,7 @@
     },
     {
       "name": "nom_orga",
-      "title": "Nom de l'organisation",
+      "title": "Organisation",
       "description": "Nom du producteur du jeu de données.",
       "type": "string",
       "example": "Institut national de l'information géographique et forestière",
@@ -128,9 +128,17 @@
       "example": "Inventaire forestier."
     },
     {
-      "name": "contact",
+      "name": "contact_service",
+      "title": "Service contact",
+      "description": "Adresse email du service producteur du jeu de données.",
+      "type": "string",
+      "format": "email",
+      "example": "inventaire-forestier@ign.fr"
+    },
+    {
+      "name": "contact_personne",
       "title": "Contact",
-      "description": "Adresse email de la personne ou du service qui maintient le jeu de données et/ou qui l'extrait depuis le SI source.",
+      "description": "Adresse(s) email des personnes ayant des informations sur le jeu de données ou participant à sa production.",
       "type": "string",
       "format": "email",
       "example": "jean.martin@ign.fr",
@@ -143,20 +151,14 @@
       "title": "Date de première publication",
       "description": "Date de la publication intiale du jeu de données.",
       "type": "date",
-      "example": "2005-01-14",
-      "constraints": {
-        "required": true
-      }
+      "example": "2005-01-14"
     },
     {
       "name": "date_maj",
       "title": "Date de dernière mise à jour",
       "description": "Date de la dernière modification effective du jeu de données.",
       "type": "date",
-      "example": "2019-05-28",
-      "constraints": {
-        "required": true
-      }
+      "example": "2019-05-28"
     },
     {
       "name": "freq_maj",
@@ -165,18 +167,14 @@
       "type": "string",
       "example": "Annuelle",
       "constraints": {
-        "required": true,
+        "required": false,
         "enum": [
-          "Autre",
-          "Irrégulière",
-          "Toutes les heures",
+          "Aucune (contribution unique)",
+          "Permanente (temps réel)",
           "Quotidienne ou plusieurs fois par jour",
           "Hebdomadaire ou plusieurs fois par semaine",
           "Mensuelle ou plusieurs fois par mois",
-          "Bimestrielle",
-          "Trimestrielle",
-          "Semestrielle",
-          "Annuelle"
+          "Annuelle ou plusieurs fois par an"
         ]
       }
     },
@@ -187,7 +185,17 @@
       "type": "string",
       "example": "France métropolitaine",
       "constraints": {
-        "required": true
+        "required": true,
+        "enum": [
+          "Commune",
+          "EPCI",
+          "Département",
+          "Région",
+          "France métropolitaine",
+          "France entière",
+          "Europe",
+          "Monde"
+        ]
       }
     },
     {
@@ -196,10 +204,7 @@
       "description": "Page web du jeu de données.",
       "type": "string",
       "format": "uri",
-      "example": "https://www.data.gouv.fr/fr/datasets/donnees-brutes-de-l-inventaire-forestier/",
-      "constraints": {
-        "required": true
-      }
+      "example": "https://www.data.gouv.fr/fr/datasets/donnees-brutes-de-l-inventaire-forestier/"
     },
     {
       "name": "format",
@@ -216,10 +221,7 @@
       "title": "Licence",
       "description": "Licence appliquée au jeu de données.",
       "type": "string",
-      "example": "Licence ouverte",
-      "constraints": {
-        "required": true
-      }
+      "example": "Licence ouverte"
     }
   ],
   "custom_checks": [
