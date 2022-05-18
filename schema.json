@@ -5,12 +5,12 @@
   "description": "Spécification du catalogue des jeux de données produits par une organisation",
   "countryCode": "FR",
   "homepage": "https://github.com/etalab/schema-catalogue-donnees/",
-  "path": "https://github.com/etalab/schema-catalogue-donnees/raw/v0.1.0/schema.json",
+  "path": "https://github.com/etalab/schema-catalogue-donnees/raw/v0.2.0/schema.json",
   "resources": [
     {
       "title": "Fichier valide (CSV)",
       "name": "exemple-valide-csv",
-      "path": "https://github.com/etalab/schema-catalogue-donnees/raw/v0.1.0/exemple-valide.csv"
+      "path": "https://github.com/etalab/schema-catalogue-donnees/raw/v0.2.0/exemple-valide.csv"
     }
   ],
   "sources": [
@@ -45,9 +45,9 @@
       "email": "johan.richer@jailbreak.paris"
     }
   ],
-  "version": "0.1.0",
+  "version": "0.2.0",
   "created": "2021-09-02",
-  "lastModified": "2021-09-02",
+  "lastModified": "2022-05-18",
   "licenses":[
     {
       "title":"Etalab Licence Ouverte 2.0",
