@@ -10,7 +10,7 @@
     {
       "title": "Fichier valide (CSV)",
       "name": "exemple-valide-csv",
-      "path": "https://github.com/etalab/schema-catalogue-donnees/raw/master/exemple-valide.csv"
+      "path": "https://github.com/etalab/schema-catalogue-donnees/raw/v0.1.0/exemple-valide.csv"
     }
   ],
   "sources": [
