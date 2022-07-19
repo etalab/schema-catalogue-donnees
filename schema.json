@@ -165,18 +165,7 @@
       "title": "Fréquence de mise à jour",
       "description": "Périodicité suivant laquelle des modifications sont apportées au jeu de données.",
       "type": "string",
-      "example": "Annuelle",
-      "constraints": {
-        "required": false,
-        "enum": [
-          "Aucune (contribution unique)",
-          "Permanente (temps réel)",
-          "Quotidienne ou plusieurs fois par jour",
-          "Hebdomadaire ou plusieurs fois par semaine",
-          "Mensuelle ou plusieurs fois par mois",
-          "Annuelle ou plusieurs fois par an"
-        ]
-      }
+      "example": "Annuelle"
     },
     {
       "name": "couv_geo",
@@ -185,17 +174,7 @@
       "type": "string",
       "example": "France métropolitaine",
       "constraints": {
-        "required": true,
-        "enum": [
-          "Commune",
-          "EPCI",
-          "Département",
-          "Région",
-          "France métropolitaine",
-          "France entière",
-          "Europe",
-          "Monde"
-        ]
+        "required": true
       }
     },
     {
