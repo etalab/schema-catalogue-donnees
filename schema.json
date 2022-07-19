@@ -190,7 +190,7 @@
       "title": "Format",
       "description": "Liste des formats associés à ce jeu de données, séparés par une virgule.",
       "type": "string",
-      "example": "CSV, XLSX",
+      "example": "CSV,XLSX",
       "constraints": {
         "required": true
       }
