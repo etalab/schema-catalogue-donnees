@@ -79,7 +79,7 @@
     {
       "name": "mots_cles",
       "title": "Mots clés",
-      "description": "Liste de mots ou \"tags\" associés au jeu de données et le décrivant, séparés par une virgule.",
+      "description": "Liste de mots ou \"tags\" associés au jeu de données, séparés par une virgule.",
       "type": "string",
       "example": "arbre,forêt,écologie",
       "constraints": {
@@ -89,7 +89,7 @@
     {
       "name": "nom_orga",
       "title": "Organisation",
-      "description": "Nom du producteur du jeu de données.",
+      "description": "Nom de l'organisation qui produit le jeu de données.",
       "type": "string",
       "example": "Institut national de l'information géographique et forestière",
       "constraints": {
@@ -98,22 +98,22 @@
     },
     {
       "name": "siret_orga",
-      "title": "Numéro SIRET de l'organisation",
-      "description": "Numéro SIRET du producteur du jeu de données.",
+      "title": "Numéro SIRET",
+      "description": "Numéro SIRET de l'organisation qui produit le jeu de données.",
       "type": "string",
       "example": "18006701900430"
     },
     {
       "name": "id_alt_orga",
-      "title": "Identifiant alternatif de l'organisation",
-      "description": "Identifiant du producteur ne possédant pas de numéro SIRET. Dans le cas d'une association il s'agira par exemple du numéro RNA.",
+      "title": "Identifiant alternatif",
+      "description": "Identifiant de l'organisation, si elle ne possède pas de numéro SIRET. Dans le cas d'une association, par exemple, il s'agit de son numéro RNA.",
       "type": "string",
       "example": "W343008792"
     },
     {
       "name": "service",
       "title": "Service",
-      "description": "Service producteur du jeu de données au sein de l'organisation.",
+      "description": "Nom de l'entité (direction, sous-direction, service...) qui produit le jeu de données au sein de l'organisation.",
       "type": "string",
       "example": "Service de l'inventaire forestier.",
       "constraints": {
@@ -129,8 +129,8 @@
     },
     {
       "name": "contact_service",
-      "title": "Service contact",
-      "description": "Adresse email du service producteur du jeu de données.",
+      "title": "Contact service",
+      "description": "Adresse email de l'entité qui produit le jeu de données au sein de l'organisation.",
       "type": "string",
       "format": "email",
       "example": "inventaire-forestier@ign.fr"
@@ -155,7 +155,7 @@
     },
     {
       "name": "date_maj",
-      "title": "Date de dernière mise à jour",
+      "title": "Date de mise à jour",
       "description": "Date de la dernière modification effective du jeu de données.",
       "type": "date",
       "example": "2019-05-28"
@@ -201,7 +201,7 @@
     {
       "name": "url",
       "title": "URL",
-      "description": "Page web du jeu de données.",
+      "description": "Page web associée au jeu de données.",
       "type": "string",
       "format": "uri",
       "example": "https://www.data.gouv.fr/fr/datasets/donnees-brutes-de-l-inventaire-forestier/"
@@ -209,7 +209,7 @@
     {
       "name": "format",
       "title": "Format",
-      "description": "Format de la ressource (fichier) composant le jeu de données. Si plusieurs ressources existent, autant de valeurs peuvent être renseignées en les séparant par une virgule.",
+      "description": "Liste des formats associés à ce jeu de données, séparés par une virgule.",
       "type": "string",
       "example": "CSV, XLSX",
       "constraints": {
@@ -219,7 +219,7 @@
     {
       "name": "licence",
       "title": "Licence",
-      "description": "Licence appliquée au jeu de données.",
+      "description": "Licence de réutilisation appliquée au jeu de données.",
       "type": "string",
       "example": "Licence ouverte"
     }
